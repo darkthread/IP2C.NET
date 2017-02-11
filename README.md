@@ -1,5 +1,4 @@
 # IP2C.NET
-A C# in-memory IP to country search engine based on http://software77.net/geo-ip/  database
 
 Use single C# class to implement IP address to country search based on  http://software77.net/geo-ip/ database.
 
