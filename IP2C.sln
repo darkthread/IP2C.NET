@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP2C", "IP2C.NET\IP2C.NET.csproj", "{76630D12-8D83-4B59-B8D6-99F930C153E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP2CTest", "IP2CTest\IP2CTest.csproj", "{474F91C5-E03E-47FF-8D78-522A8461F1FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76630D12-8D83-4B59-B8D6-99F930C153E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76630D12-8D83-4B59-B8D6-99F930C153E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76630D12-8D83-4B59-B8D6-99F930C153E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76630D12-8D83-4B59-B8D6-99F930C153E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{474F91C5-E03E-47FF-8D78-522A8461F1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474F91C5-E03E-47FF-8D78-522A8461F1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474F91C5-E03E-47FF-8D78-522A8461F1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474F91C5-E03E-47FF-8D78-522A8461F1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,345 @@
+#
+# INFORMATION AND NOTES ON IpToCountry
+# ====================================
+#
+# LICENSE: "DONATIONWARE"
+# =======================
+#
+# Definition: http://en.wikipedia.org/wiki/Donationware
+# Definition: http://www.techterms.com/definition/donationware
+#
+# This database is "DONATIONWARE"
+# ===============================
+#
+# It's simple: we cannot offer tens of thousands of downloads per day without
+# assistance. Please help us.... the PayPal link is near the top right of the
+# page here: http://software77.net/geo-ip/
+#
+# If you use the database in a commercial application and therefore benefit
+# financially we ask you to to make a small donation.
+#
+# If this database is anywhere half decent, pay what it's worth to you, as a
+# developer or an end user.
+#
+# Our IPToCountry database is now part of many Linux and even WINDOWS
+# distributions/packages. In other words, it comes included with the sofware
+# the end user purchases and the end user is usually totally oblivious to this.
+#
+# It may be invisible to the user. S/he may not even know they have it on their
+# PC, MAC, Tablet, Cellphone or other device; but be assured, this database
+# is pervasive, and is to be found on many devices across the planet.
+# As a tiny (truly tiny) company, we cannot support the world.
+#
+# We appeal to developers to make mention of the fact that this database
+# is DONATIONWARE; many end user applications download the database weekly
+# or even daily as part of the application and the end user is not even aware
+# of the fact that they are making use of a resource entirely for free.
+#
+# HELP US! ... and make a small donation. And if you are a developer, make it
+# known to your end users. Please.
+#
+# The donation link can be found near the top right on the main page
+# http://software77.net/geo-ip/
+#
+# Many thanks!
+# ==============================================================================
+# ==============================================================================
+#
+# File Time Stamp   : Thu Feb  9 06:40:01 2017 UTC.
+# Generator         : ip.pl on http://Software77.net (A Webnet77 Company)
+# Software Author   : BRM
+# Software Version  : 5.9.7
+# Contact           : http://webnet77.com/
+# Download          : http://software77.net/geo-ip/
+# ######################################################################
+# BEFORE you send us questions, please see the FAQ:
+# http://software77.net/faq.html
+# ######################################################################
+# ######################################################################
+#     IMPORTANT !!!  IMPORTANT !!!  IMPORTANT !!!  IMPORTANT !!!
+# ######################################################################
+# ######################################################################
+# PLEASE NOTE THIS DATABASE MOVED AT THE END OF JUNE 2009 TO
+# http://software77.net/geo-ip/
+#
+# THE OLD LINKS TO DOWNLOAD ARE NO LONGER BEING REDIRECTED
+# ######################################################################
+# ######################################################################
+#
+# History
+# =======
+#
+# The IPV4 database was first implemented in 2005 to offer a free alternative to
+# the commercial databases that were available at the time. Today, there are
+# literally hundreds of sources of "IP-to-Country" databases available. Many
+# based on the data from this database.
+#
+# When we started this database we were amazed to find that almost 2 billion
+# IP addresses in the IPV4 space had been assigned. Today, that figure is just
+# over 3.5 billion. The database has grown from about 2MB unzipped
+# to over 6MB. That's a lot of new assigned IP space for just a few years!
+#
+# In July 2010 an experimental version of the IPV6 database was released. It is
+# available an two flavors -
+#
+# A database of IPV6 ranges
+# A database in IPV6 CIDR format
+#
+# What this database is
+# =====================
+#
+# This Database is operated and maintained by Webnet77 and updated every 24
+# hours. It represents most of the IPV4 and IPV6 numbers in use on the Internet
+# today and includes the IANA reserved IPs.
+#
+# This Database is automatically reconstituted every 24 hours by special
+# software running on our servers. The top of the main page shows how long ago
+# it was updated.
+#
+# Database download limit
+# =======================
+#
+# We do limit downloads and lookups per IP per 3 hour period.
+#
+# We use a system of "hitpoints":
+#
+# a. You are allowed 250 hitpoints in any 3 hour period.
+# b. An IP lookup costs 1 hitpoint(s).
+# c. A complete Database download is 14 hitpoints
+# d. If you exceed 250 hitpoints in any 3 hour period, you will not
+#    be able to download or lookup anything until the full 3 hour period
+#    has elapsed.
+# e. Should you attempt further downloads while "banned", a weighting algorithm will
+#    be applied to your IP address causing further time extensions.
+# f. If you reach more than 900 hitpoints in 3 hours, your IP will be
+#    banned for a v-e-r-y long time.
+#
+# PLEASE DO NOT ask us to remove your IP manually if you get banned. It's your job
+# as a developer to make sure your IP does not get banned. Your IP will
+# automatically be removed eventually depending on the above criteria.
+#
+# Unfortunately we have to do this as some "developers" have abused our resources
+# in the past because their software went haywire and tried to download the
+# database hundreds of times per minute essentially resulting in a denial of
+# Service attack (granted - unintentional, but destructive nonetheless).
+#
+# For some this is a problem as certain ISP's (like AOL) proxy outbound users on a
+# single IP and your download gets accumulated with others on the same IP. We
+# wish we could help but unfortunately there is nothing we can do about that.
+#
+# A Request regarding automatic downloads
+# =======================================
+#
+# If you are downloading automatically with a CRON job, PLEASE, PLEASE DO NOT
+# set your download time to 00:00:00 (midnight). Please use some arbitrary time
+# that is not 12 midnight. If everyone downloaded at exactly midnight, the
+# download speed for all would slow to a crawl. Bottom line is to get the
+# best speed, DO NOT download at midnight. Please choose an arbitrary
+# time (especially the minutes).
+#
+# AUTOMATIC DOWNLOADS
+# ===================
+#
+# To do an automated download with something like wget, use the following link
+# format (some versions of wget may require you add the http:// prefix):
+#
+# wget software77.net/geo-ip/?DL=1 -O /path/IpToCountry.csv.gz      IPV4 gzip
+# wget software77.net/geo-ip/?DL=2 -O /path/IpToCountry.csv.zip     IPV4 zip
+# wget software77.net/geo-ip/?DL=3 -O /path/IpToCountry.csv.MD5     IPV4 MD5 (CSV file)
+# wget software77.net/geo-ip/?DL=4 -O /path/IpToCountry.dat         IPV4 Geo::IPfree
+# wget software77.net/geo-ip/?DL=5 -O /path/IpToCountry.dat.MD5     IPV4 MD5 Geo::IPfree
+# wget software77.net/geo-ip/?DL=6 -O /path/country-codes.txt       Country Codes
+# wget software77.net/geo-ip/?DL=7 -O /path/IpToCountry.6R.csv.gz   IPV6 Ranges
+# wget software77.net/geo-ip/?DL=8 -O /path/IpToCountry.6R.csv.MD5  IPV6 Ranges MD5
+# wget software77.net/geo-ip/?DL=9 -O /path/IpToCountry.6C.csv.gz   IPV6 CIDR
+# wget software77.net/geo-ip/?DL=10 -O /path/IpToCountry.6C.csv.MD5 IPV6 CIDR MD5
+# Please NOTE the "/" before the "?"
+# ------------------------------------------------------------------------------
+#
+# FILE FORMAT IPV4
+# ================
+#
+#      --------------------------------------------------------------
+#      All lines beginning with either "#" or whitespace are comments
+#      --------------------------------------------------------------
+#
+# IP FROM      IP TO        REGISTRY  ASSIGNED   CTRY CNTRY COUNTRY
+# "1346797568","1346801663","ripencc","20010601","il","isr","Israel"
+#
+# IP FROM & : Numerical representation of IP address.
+# IP TO       Example: (from Right to Left)
+#             1.2.3.4 = 4 + (3 * 256) + (2 * 256 * 256) + (1 * 256 * 256 * 256)
+#             is 4 + 768 + 13,1072 + 16,777,216 = 16,909,060
+#
+# REGISTRY  : apnic, arin, lacnic, ripencc and afrinic
+#             Also included as of April 22, 2005 are the IANA IETF Reserved
+#             address numbers. These are important since any source claiming
+#             to be from one of these IPs must be spoofed.
+#
+# ASSIGNED  : The date this IP or block was assigned. (In Epoch seconds)
+#             NOTE: Where the allocation or assignment has been transferred from
+#                   one registry to another, the date represents the date of first
+#                   assignment or allocation as received in from the original RIR.
+#                   It is noted that where records do not show a date of first
+#                   assignment, the date is given as "0".
+#
+# CTRY      : 2 character international country code
+#             NOTE: ISO 3166 2-letter code of the organisation to which the
+#             allocation or assignment was made, and the enumerated variances of:
+#                  AP - non-specific Asia-Pacific location
+#                  CS - Serbia and Montenegro
+#                  YU - Serbia and Montenegro (Formally Yugoslavia) (Being phased out)
+#                  EU - non-specific European Union location
+#                  FX - France, Metropolitan
+#                  PS - Palestinian Territory, Occupied
+#                  UK - United Kingdom (standard says GB)
+#                * ZZ - IETF RESERVED address space.
+#
+# FILE FORMAT IPV6
+# ================
+#
+#      --------------------------------------------------------------
+#      All lines beginning with either "#" or whitespace are comments
+#      --------------------------------------------------------------
+#
+# We got rid of the quoted text in the IPV6 database and it is comma separated only.
+#
+# Range File
+# ----------
+#
+# Start IP   - END IP                                ,CC,RR  ,ASSIGNED
+# 2001:19a0::-2001:19a0:ffff:ffff:ffff:ffff:ffff:ffff,US,arin,1089676800
+#
+# CIDR File
+# ---------
+#
+# Start IP/CIDR,CC, RR    ,ASSIGNED
+# 2001:938::/32,AT,ripencc,1034553600
+#
+# ------------------------------------------------------------------------------
+#
+# NOTE: Although CS is not an ISO-3166 code, it appears to be a colloquial term
+# used by registries and appears in the RIR (Regional Internet registry) database.
+#
+#             These values are not defined in ISO 3166 but are widely used.
+#           * IANA Reserved Address space
+#
+# CNTRY     : Country Abbreviation. Usually 3 Character representation
+#
+# COUNTRY   : Country Name. Full Country Name.
+#
+# ==========
+# UPDATE LOG
+# ==========
+#
+# June 2005    - Countries falling under AFRINIC now show correctly
+#
+# October 2006 - Many thanks to Lee Cjin Pheow from Singapore for this:
+#                As of September 2006, Serbia and Montenegro now have new ISO
+#                Country codes. See: http://en.wikipedia.org/wiki/Serbia and
+#                http://en.wikipedia.org/wiki/Montenegro.
+#
+#                We have updated the database to include "RS" and "ME" for these
+#                two contries but currently the registries still provide the OLD
+#                country code data. Thus you may need to translate the codes
+#                "YU" and "CS" -> "ME" and the same for "ME".
+#
+#                For the most part it appears that translating CS -> RS and
+#                YU -> ME works but it is probably not entirely accurate.
+#
+# Nov 2006     - Added country code for &Aring;LAND ISLANDS - AX - ALA
+# Mar 2007     - Added Country code for JERSEY - JE - JEY
+# Mar 2007     - Added ASCENSION ISLAND - AC (Reserved on request of UPU
+#                                             Used as a ccTLD)
+# Mar 2008     - Fixed a bug where the country code had a space after it.
+#                Many thanks to Alexander Betinski of Canada for reporting it.
+# April 2009   - [v5.0.0] Completly new frontent and backend for better
+#                performacnce.
+# April 2009   - [v5.1.0] Duplicate IP blocks now indicated in file header.
+#                [Prefixed with "~~" to begin and "~~" to end each line].
+#                (See notes in database CSV file for format)
+# May 2009     - [v5.2.0] Database lookups will now work even during updates
+#                and database downloads are no longer unavailable for 5 minutes
+#                or more during updates but for only 1 or two seconds.
+# May 2009     - [v5.2.1] Country Code for Taiwan, PRC should be ROC. Thank you
+#                Tony Chen
+# June 2009    - [v5.2.2] Added country code for Saint Martin
+# July 2009    - [v5.3.0] Added new files: Geo::IPfree & MD5, Country codes text
+#                format. Geo::IPfree Format is used by the perl Geo::IPfree
+#                module and is used in many commercial as well as free applications
+#                (like AWSTATS). We now include the file in the correct format
+#                to be used directly by these applictions.
+# July 2009    - [v5.3.1] Minor bug fix - IP range on main page was off by 1
+# Oct 2009     - [v5.3.2] Added TIMOR-LESTE (formerley East Timor since 2002)
+# Mar 2010     - [v5.4.0] Internal code optimizations as well as more lenient
+#                banning settings
+# April 2010   - action=downloadZ and action=download have been discontinued.
+#                You must use the format specified at the top of this file
+#                for automated downloads.
+# May 2010     - [v5.4.1] Minor internal bug fix 5410_0
+# July 2010    - [v5.5.0] Added *experimental* IPV6 database in two formats
+# Jan 2011     - [v5.6.0] Added Numeric version of IP
+# Apr 2011     - [v5.7.0] Old daily IPV4 files now being retianed at
+#                         http://software77.net/geo-ip/history/
+# May 2011     - [v5.7.1] Minor HTML corrections
+# Aug 2011     - [v5.7.2] Changed &Aring;LAND ISLANDS to ALAND ISLANDS. Not technically
+#                         correct but works for 7 bit ASCII
+# Aug 2011     - [v5.8.0] Added web interface for IP -> CIDR and CIDR -> IP (IPV4 only)
+# Sep 2011     - [v5.8.1] Added Country code for South Sudan as well as flag icon
+# Sep 2012     - [v5.9.0] Added a concatenation feature to the main page "Country IP listing"
+#                When using CIDR format, blocks will be concatenated (flattened) where possible.
+# Sep 2012     - [v5.9.1] Added country codes and flags for Bonaire; Saint Eustatius; Saba and
+#                Curacao
+# Oct 2012     - Software was previously licensed as Gpl v3. However, this proved
+#                to be somewhat restricting for some commercial developers. As of
+#                now, the software is "DONATIONWARE" which basically means anyone
+#                can use it anyway they want - commercial applications included.
+#                All we ask in return is some reciprocation.
+#                The donation link can be found near the top right on the main page:
+#                http://software77.net/geo-ip/
+# Dec 2012     - [v5.9.2] Added Country code and Ranges for Sint Marten, SX
+# Nov 2013     - [v5.9.3] Cleaned up the DONATIONWARE License description
+# Mar 2014     - [v5.9.4] Added referrer code to multi lookup tool
+# May 2014     - [v5.9.5] 'Trying' to remove the "RE-CAPTCHA" on the Multi=IP lookup
+#                Due to {not sure} some WordPress/Drupal/Joomla plugin that kills
+#                this server DEAD. We have added a SHA512 key in a feeble attempt
+#                to prevent remote calling of the MULTI-IP script. If you are one of
+#                the people who wrote the WordPress/Drupal/Joomla etc.... plugin;
+#                please discontinue it.... for now we have removed the RE-CAPTCHA;
+#                Let us all play nice: if your customers need the DB, Download it
+#                once / week. PLEASE, do not try to do it realtime via MULTI-LOOKUP!
+# July 2014    - Many of the ISO 1366 codes we were using were outdated. These were
+#                kindly pointed out by Niels Harland https://github.com/nielsharland,
+#                And even more kindly he gave up a weekend to do much research
+#                and provide us with an up to date country-codes.txt file. Niels,
+#                thank you very much for your efforts!
+# March 2015   - [v5.9.7] Data Collection Error Fixed Where Apnic And Afrinic Where
+#                no longer collecting latest delegated lists correctly.
+# ------------------------------------------------------------------------------
+# THIS DATABSE IS PROVIDED WITHOUT ANY WARRANTY WHATSOEVER. USE ENTIRELY AT YOUR
+# OWN RISK. NO LIABILITY WHATSOEVER, OF ANY NATURE, WILL BE ASSUMEND BY
+# Webnet77.com, IT'S DISTRIBUTORS, RESELLERS OR AGENTS. SHOULD THE DATABASE
+# PROVE TO BE FAULTY, CAUSE YOU LOSS OR OTHER FINANCIAL DAMAGE, YOU AGREE YOU
+# HAVE NO CLAIM AGINST Webnet77.com IT'S DISTRIBUTORS, RESELLERS OR AGENTS. IF
+# YOU DO NOT ACCEPT THESE TERMS YOU MAY NOT USE THIS DATABASE.
+# ------------------------------------------------------------------------------
+#
+#                            ?2002-2017 Webnet77.com
+#
+#
+# The following duplicates were detected during this compilation
+# --------------------------------------------------------------
+#
+# A duplicate row is a row where the start IP address is identical for at
+# least two records. (Often, the ending IP is different though). There are
+# several reasons why this occurs. For an explanation, see the FAQ
+# - http://software77.net/faq.html
+#
+# ~~159.117.192.000,159.117.199.255,NL,ripencc,702777600~~
+# ~~159.117.202.000,159.117.203.255,NL,ripencc,702777600~~
+# ~~159.117.204.000,159.117.207.255,NL,ripencc,702777600~~
+# ~~159.117.208.000,159.117.215.255,US,arin,1482278400~~
+# ~~159.117.216.000,159.117.219.255,US,arin,1482278400~~
+#
+#
+"X","16777215","iana","410227200","ZZ","ZZZ","Reserved"
